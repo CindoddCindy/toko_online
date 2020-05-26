@@ -6,18 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
+    android:background="@drawable/baron_ffod"
     android:gravity="center"
     tools:context=".MainActivity">
 
-  <ImageView
-      android:layout_margin="20dp"
-      android:padding="5dp"
-      android:layout_gravity="center"
-      android:scaleType="fitXY"
-      android:src="@drawable/spalshscreen"
-      android:layout_width="200dp"
-      android:id="@+id/img_awal"
-      android:layout_height="200dp">
 
-  </ImageView>
 </LinearLayout>
