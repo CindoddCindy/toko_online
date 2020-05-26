@@ -1,83 +1,460 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/colorApp"
     tools:context=".view.FragmentFood">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="1dp"
+                android:layout_margin="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="2dp"
+                    app:sliderIndicatorSelectedColor="#5A5A5A"
+                    app:sliderIndicatorUnselectedColor="#FFF"
+                    app:sliderScrollTimeInSec="1"
+                    app:sliderStartAutoCycle="true" />
+
+
+                <ImageView
+
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    android:scaleType="center"
+                    android:id="@+id/iv_auto_image_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.SearchView
+            android:background="@color/colorTextWhite"
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+        </androidx.appcompat.widget.SearchView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_margin="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_food_hor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="2dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.cardview.widget.CardView
+
+                    android:layout_margin="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Select By Category"
+                            android:textSize="15dp"
+                            android:textColor="@color/colorApp"
+                            android:textStyle="bold"
+                            android:layout_margin="5dp"
+                            android:gravity="left">
+
+                        </TextView>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:padding="5dp"
+                                android:layout_margin="1dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_margin="1dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardUseCompatPadding="true"
+                                    app:cardMaxElevation="2dp"
+                                    app:cardCornerRadius="2dp"
+                                    app:cardElevation="2dp"
+                                    android:layout_gravity="center"
+                                    android:clickable="true">
+                                    <LinearLayout
+                                        android:gravity="center"
+                                        android:layout_gravity="center"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                        <ImageView
+                                            android:src="@drawable/ic_local_dining_black_24dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="150dp"
+                                            android:id="@+id/img_food_makan_pagi"
+                                            android:scaleType="fitXY">
+
+                                        </ImageView>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:gravity="right"
+                                        android:layout_gravity="bottom"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                        <TextView
+                                            android:layout_weight="1"
+                                            android:layout_gravity="right"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:text=" Breakfast "
+                                            android:textSize="15dp"
+                                            android:gravity="right"
+                                            android:layout_margin="5dp"
+                                            android:padding="2dp"
+                                            android:textStyle="bold"
+                                            android:shadowColor="#080909"
+                                            android:shadowRadius="5"
+                                            android:shadowDx="5"
+                                            android:shadowDy="5"
+                                            android:textColor="@color/colorTextWhite"
+                                            >
+
+
+                                        </TextView>
+
+
+
+
+
+                                    </LinearLayout>
+
+
+
+
+
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:padding="5dp"
+                                android:layout_margin="1dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_margin="1dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardUseCompatPadding="true"
+                                    app:cardMaxElevation="2dp"
+                                    app:cardCornerRadius="2dp"
+                                    app:cardElevation="2dp"
+                                    android:layout_gravity="center"
+                                    android:clickable="true">
+                                    <LinearLayout
+                                        android:gravity="center"
+                                        android:layout_gravity="center"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                        <ImageView
+                                            android:src="@drawable/ic_local_dining_black_24dp"
+                                            android:layout_gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="150dp"
+                                            android:id="@+id/img_food_lunch"
+                                            android:scaleType="fitXY">
+
+                                        </ImageView>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:gravity="right"
+                                        android:layout_gravity="bottom"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                        <TextView
+                                            android:layout_weight="1"
+                                            android:layout_gravity="right"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Lunch "
+                                            android:textSize="15dp"
+                                            android:gravity="right"
+                                            android:layout_margin="5dp"
+                                            android:padding="2dp"
+                                            android:textStyle="bold"
+                                            android:shadowColor="#080909"
+                                            android:shadowRadius="5"
+                                            android:shadowDx="5"
+                                            android:shadowDy="5"
+                                            android:textColor="@color/colorTextWhite"
+                                            >
+
+
+                                        </TextView>
+
+
+                                    </LinearLayout>
+
+
+
+
+
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:padding="5dp"
+                                android:layout_margin="1dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_margin="1dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardUseCompatPadding="true"
+                                    app:cardMaxElevation="2dp"
+                                    app:cardCornerRadius="2dp"
+                                    app:cardElevation="2dp"
+                                    android:layout_gravity="center"
+                                    android:clickable="true">
+                                    <LinearLayout
+                                        android:gravity="center"
+                                        android:layout_gravity="center"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                        <ImageView
+                                            android:src="@drawable/ic_local_dining_black_24dp"
+                                            android:layout_gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="150dp"
+                                            android:id="@+id/img_food_afternoon"
+                                            android:scaleType="fitXY">
+
+                                        </ImageView>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:gravity="right"
+                                        android:layout_gravity="bottom"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                        <TextView
+                                            android:layout_weight="1"
+                                            android:layout_gravity="right"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Afternoon Meal "
+                                            android:textSize="15dp"
+                                            android:gravity="right"
+                                            android:layout_margin="5dp"
+                                            android:padding="2dp"
+                                            android:textStyle="bold"
+                                            android:shadowColor="#080909"
+                                            android:shadowRadius="5"
+                                            android:shadowDx="5"
+                                            android:shadowDy="5"
+                                            android:textColor="@color/colorTextWhite"
+                                            >
+
+
+                                        </TextView>
+
+
+
+
+
+                                    </LinearLayout>
+
+
+
+
+
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:padding="5dp"
+                                android:layout_margin="1dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_margin="1dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:cardUseCompatPadding="true"
+                                    app:cardMaxElevation="2dp"
+                                    app:cardCornerRadius="2dp"
+                                    app:cardElevation="2dp"
+                                    android:layout_gravity="center"
+                                    android:clickable="true">
+                                    <LinearLayout
+                                        android:gravity="center"
+                                        android:layout_gravity="center"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                        <ImageView
+                                            android:src="@drawable/ic_local_dining_black_24dp"
+                                            android:layout_gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="150dp"
+                                            android:id="@+id/img_food_dinner"
+                                            android:scaleType="fitXY">
+
+                                        </ImageView>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:gravity="right"
+                                        android:layout_gravity="bottom"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+                                        <TextView
+                                            android:id="@+id/nama_makanan_satu"
+                                            android:layout_weight="1"
+                                            android:layout_gravity="right"
+                                            android:layout_width="150dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="Dinner "
+                                            android:textSize="15dp"
+                                            android:gravity="right"
+                                            android:layout_margin="5dp"
+                                            android:padding="2dp"
+                                            android:textStyle="bold"
+                                            android:shadowColor="#080909"
+                                            android:shadowRadius="5"
+                                            android:shadowDx="5"
+                                            android:shadowDy="5"
+                                            android:textColor="@color/colorTextWhite"
+                                            >
+
+
+                                        </TextView>
+
+
+
+
+                                    </LinearLayout>
+
+
+
+
+
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.cardview.widget.CardView
-        app:cardCornerRadius="6dp"
-        android:layout_margin="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.smarteist.autoimageslider.SliderView
-            android:id="@+id/imageSlider"
-            android:layout_width="match_parent"
-            android:layout_height="130dp"
-            app:sliderAnimationDuration="600"
-            app:sliderAutoCycleDirection="back_and_forth"
-            app:sliderAutoCycleEnabled="true"
-            app:sliderIndicatorAnimationDuration="600"
-            app:sliderIndicatorGravity="center_horizontal|bottom"
-            app:sliderIndicatorMargin="15dp"
-            app:sliderIndicatorOrientation="horizontal"
-            app:sliderIndicatorPadding="3dp"
-            app:sliderIndicatorRadius="2dp"
-            app:sliderIndicatorSelectedColor="#5A5A5A"
-            app:sliderIndicatorUnselectedColor="#FFF"
-            app:sliderScrollTimeInSec="1"
-            app:sliderStartAutoCycle="true" />
-
-    </androidx.cardview.widget.CardView>
-    <androidx.appcompat.widget.SearchView
-        android:background="@color/colorTextWhite"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </androidx.appcompat.widget.SearchView>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <androidx.cardview.widget.CardView
-            app:cardCornerRadius="6dp"
-            android:layout_margin="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_food_hor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.recyclerview.widget.RecyclerView>
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <androidx.cardview.widget.CardView
-            app:cardCornerRadius="6dp"
-            android:layout_margin="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </androidx.recyclerview.widget.RecyclerView>
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
 
 
-
-</LinearLayout>
+</ScrollView>

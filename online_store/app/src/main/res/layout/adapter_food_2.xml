@@ -7,9 +7,8 @@
     android:layout_margin="1dp"
     android:layout_height="wrap_content">
     <LinearLayout
-        android:background="@color/cardview_shadow_start_color"
-        android:padding="5dp"
-        android:layout_margin="2dp"
+        android:padding="1dp"
+        android:layout_margin="1dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -21,7 +20,7 @@
             app:cardMaxElevation="2dp"
             app:cardCornerRadius="2dp"
             app:cardElevation="2dp"
-            android:layout_gravity="center"
+            android:layout_gravity="right"
             android:clickable="true">
             <LinearLayout
 
@@ -29,7 +28,7 @@
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
                 <LinearLayout
                     android:layout_weight="1"
                     android:layout_width="match_parent"
@@ -39,7 +38,7 @@
                             android:layout_margin="5dp"
                             android:src="@drawable/ic_local_dining_black_24dp"
                             android:layout_gravity="center"
-                            android:layout_width="match_parent"
+                            android:layout_width="130dp"
                             android:layout_height="130dp"
                             android:id="@+id/img_food_vertical"
                             android:scaleType="fitXY">
@@ -50,20 +49,20 @@
 
                 </LinearLayout>
                 <LinearLayout
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <TextView
                         android:id="@+id/foodNameVer"
-                        android:drawableLeft="@drawable/ic_local_dining_black_24dp"
-                        android:drawablePadding="10dp"
                         android:layout_margin="3dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Food Test "
                         android:textSize="15dp"
-                        android:gravity="left"
+                        android:gravity="center"
                         android:padding="2dp"
                         android:textStyle="bold"
                         android:textColor="@color/colorTextBlack"
@@ -74,53 +73,44 @@
 
                     <TextView
                         android:id="@+id/FoodPriVer"
-                        android:drawableLeft="@drawable/ic_attach_money_black_24dp"
-                        android:drawablePadding="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="3dp"
                         android:text="Rp. 10.000"
                         android:textSize="15dp"
-                        android:gravity="left"
-                        android:padding="2dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorTextBlack"
-                        >
-
-
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="3dp"
-                        android:text="Enak dan Halal kualitas terjamin"
-                        android:textSize="11dp"
-                        android:gravity="left"
-                        android:padding="2dp"
-                        android:textStyle="bold"
-                        android:textColor="@color/colorTextBlack"
-                        >
-
-
-                    </TextView>
-
-                    <TextView
-                        android:background="@color/colorApp"
-                        android:layout_gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:text="Beli"
-                        android:textSize="14dp"
                         android:gravity="center"
-                        android:padding="5dp"
+                        android:padding="2dp"
                         android:textStyle="bold"
-                        android:textColor="@color/colorTextWhite"
+                        android:textColor="@color/colorTextBlack"
                         >
 
 
                     </TextView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_margin="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="Add"
+                            android:textSize="15dp"
+                            android:gravity="center"
+                            android:padding="2dp"
+                            android:textStyle="bold"
+                            android:background="@color/colorApp"
+                            android:textColor="@color/colorTextWhite"
+                            >
+
+
+                        </TextView>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
 
 
 
