@@ -65,7 +65,7 @@
                         android:gravity="center"
                         android:padding="2dp"
                         android:textStyle="bold"
-                        android:textColor="@color/colorTextBlack"
+                        android:textColor="@color/colorApp"
                         >
 
 
@@ -81,7 +81,7 @@
                         android:gravity="center"
                         android:padding="2dp"
                         android:textStyle="bold"
-                        android:textColor="@color/colorTextBlack"
+                        android:textColor="@color/colorApp"
                         >
 
 
