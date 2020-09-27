@@ -52,7 +52,7 @@ public class FragmentFood extends Fragment {
          imageView_malam=view.findViewById(R.id.img_food_dinner);
 
         Glide.with(getActivity())
-                .load("https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/healthy_porridge_bowl.jpg")
+                .load("https://images.immediate.co.uk/production/volatile/sites/30/2020/08/healthy_porridge_bowl-d434804.jpg?webp=true&quality=90&resize=500%2C454")
                 .into(imageView_pagi);
 
         Glide.with(getActivity())
